@@ -838,13 +838,9 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate(
             "MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">CONTACTS</span></p></body></html>", None))
         self.label_7.setText(QCoreApplication.translate(
-            "MainWindow", u"<html><head/><body><p><img src=\":/icons/icons/whatsApp.png\"/><span style=\" font-size:18pt; vertical-align:super;\">778-7910090</span></p></body></html>", None))
+            "MainWindow", u"<html><head/><body><p><img src=\":/icons/icons/whatsApp.png\"/><span style=\" font-size:18pt; vertical-align:super;\">778-791-0090</span></p></body></html>", None))
         self.label_8.setText(QCoreApplication.translate(
             "MainWindow", u"<html><head/><body><p><img src=\":/icons/icons/email.png\"/><span style=\" font-size:18pt; vertical-align:super;\">contato@blendatocantinscompany.net</span></p></body></html>", None))
-        self.label_12.setText(QCoreApplication.translate(
-            "MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">CompanySolutions</span></p></body></html>", None))
-        self.label_10.setText(QCoreApplication.translate(
-            "MainWindow", u"<html><head/><body><p><img src=\":/icons/icons/Youtube.png\"/><a href=\"https://www.youtube.com/channel/UCvo99mtwpnJtKJqeu0lQvLA\"><span style=\" font-size:18pt; font-weight:600; text-decoration: underline; color:#ffffff; vertical-align:super;\">COMPANY</span></a></p></body></html>", None))
         self.label_16.setText(QCoreApplication.translate(
             "MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">ABOUT</span></p></body></html>", None))
         self.label_17.setText(QCoreApplication.translate(
