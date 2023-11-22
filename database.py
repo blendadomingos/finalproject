@@ -19,20 +19,21 @@ class Data_base:
         cursor = self.connection.cursor()
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS companies(
+
             CNPJ TEXT,
-            NAME TEXT,
-            ADDRESS TEXT,
-            NUMBER TEXT,
-            COMPLEMENT TEXT,
-            NEIGHBORHOOD TEXT,
-            CITY TEXT,
-            STATE TEXT,
-            ZIP_CODE TEXT, 
-            PHONE TEXT,
+            NOME TEXT,
+            LOGRADOURO TEXT,
+            NUMERO TEXT,
+            COMPLEMENTO TEXT,
+            BAIRRO TEXT,
+            MUNICIPIO TEXT,
+            UF TEXT,
+            CEP TEXT,
+            TELEFONE TEXT,
             EMAIL TEXT,
+
             PRIMARY KEY(CNPJ)
             );
-
 
 
            
@@ -42,9 +43,8 @@ class Data_base:
 
     def register_company(self, fullDataSet):
 
-        
-        campos_tabela = ('CNPJ', 'NAME', 'ADDRESS', 'NUMBER', 'COMPLEMENT', 'NEIGHBORHOOD', 'CITY',
-                         'STATE', 'ZIP_CODE', 'PHONE', 'EMAIL')
+        campos_tabela = ('CNPJ', 'NOME', 'LOGRADOURO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'MUNICIPIO',
+                         'UF', 'CEP', 'TELEFONE', 'EMAIL')
 
         qntd = ("?,?,?,?,?,?,?,?,?,?,?")
         cursor = self.connection.cursor()
@@ -86,18 +86,18 @@ class Data_base:
         cursor.execute(f""" UPDATE companies set
 
 
-            CNPJ = '{fullDataSet[0]}',
-            NAME = '{fullDataSet[1]}',
-            ADDRESS = '{fullDataSet[2]}',
-            NUMBER = '{fullDataSet[3]}',
-            COMPLEMENT = '{fullDataSet[4]}',
-            NEIGHBORHOOD = '{fullDataSet[5]}',
-            CITY = '{fullDataSet[6]}',
-            STATE = '{fullDataSet[7]}',
-            ZIP_CODE = '{fullDataSet[8]}',
-            PHONE = '{fullDataSet[9]}',
+           CNPJ = '{fullDataSet[0]}',
+            NOME = '{fullDataSet[1]}',
+            LOGRADOURO = '{fullDataSet[2]}',
+            NUMERO = '{fullDataSet[3]}',
+            COMPLEMENTO = '{fullDataSet[4]}',
+            BAIRRO = '{fullDataSet[5]}',
+            MUNICIPIO = '{fullDataSet[6]}',
+            UF = '{fullDataSet[7]}',
+            CEP = '{fullDataSet[8]}',
+            TELEFONE = '{fullDataSet[9]}',
             EMAIL = '{fullDataSet[10]}'
+
             WHERE CNPJ = '{fullDataSet[0]}'""")
 
-           
         self.connection.commit()
